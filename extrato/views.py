@@ -39,9 +39,9 @@ def novo_valor(request):
         conta = Conta.objects.get(id=conta)
         
         if tipo == 'E':
-            conta.valor += int(valor)
+            conta.valor += float(valor)
         else:
-            conta.valor -= int(valor)
+            conta.valor -= float(valor)
         
         conta.save()
 
